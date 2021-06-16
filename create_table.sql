@@ -1,18 +1,18 @@
 --
--- Table structure for table `m_category`
+-- Table structure for table `category`
 --
 
-CREATE TABLE IF NOT EXISTS `m_category` (
+CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `m_category`
+-- Dumping data for table `category`
 --
 
-INSERT INTO `m_category` (`id`, `title`) 
+INSERT INTO `category` (`id`, `title`) 
 VALUES
 (1, 'Молочные продукты'),
 (2, 'Масло, жир'),
@@ -21,10 +21,10 @@ VALUES
 (5, 'Хлебобулочные изделия');
 
 --
--- Table structure for table `m_income`
+-- Table structure for table `income`
 --
 
-CREATE TABLE IF NOT EXISTS `m_income` (
+CREATE TABLE IF NOT EXISTS `income` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `dt` date NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -34,10 +34,10 @@ CREATE TABLE IF NOT EXISTS `m_income` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `m_income`
+-- Dumping data for table `income`
 --
 
-INSERT INTO `m_income` (`id`, `dt`, `product_id`, `amount`, `price`) 
+INSERT INTO `income` (`id`, `dt`, `product_id`, `amount`, `price`) 
 VALUES
 (65, '2011-01-01', 1, 1000, 12.50),
 (66, '2011-02-02', 3, 200, 4.97),
@@ -60,10 +60,10 @@ VALUES
 (83, '2011-06-11', 5, 599, 12.35);
 
 --
--- Table structure for table `m_outcome`
+-- Table structure for table `outcome`
 --
 
-CREATE TABLE IF NOT EXISTS `m_outcome` (
+CREATE TABLE IF NOT EXISTS `outcome` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `dt` date NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -73,10 +73,10 @@ CREATE TABLE IF NOT EXISTS `m_outcome` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `m_outcome`
+-- Dumping data for table `outcome`
 --
 
-INSERT INTO `m_outcome` (`id`, `dt`, `product_id`, `amount`, `price`) 
+INSERT INTO `outcome` (`id`, `dt`, `product_id`, `amount`, `price`) 
 VALUES
 (26, '2011-06-12', 1, 10, 12.70),
 (27, '2011-06-12', 3, 23, 3.49),
@@ -95,10 +95,10 @@ VALUES
 (40, '2011-12-13', 2, 1, 18.00);
 
 --
--- Table structure for table `m_product`
+-- Table structure for table `product`
 --
 
-CREATE TABLE IF NOT EXISTS `m_product` (
+CREATE TABLE IF NOT EXISTS `product` (
   `id` int(11) NOT NULL,
   `title` varchar(30) NOT NULL,
   `supplier_id` int(11) NOT NULL,
@@ -109,10 +109,10 @@ CREATE TABLE IF NOT EXISTS `m_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `m_product`
+-- Dumping data for table `product`
 --
 
-INSERT INTO `m_product` (`id`, `title`, `supplier_id`, `ctgry_id`, `unit`, `lifedays`) 
+INSERT INTO `product` (`id`, `title`, `supplier_id`, `ctgry_id`, `unit`, `lifedays`) 
 VALUES
 (1, 'Шоколад плиточный', 1, 4, 'шт', 90),
 (2, 'Конфеты Карамель', 3, 4, 'кг', 90),
@@ -127,10 +127,10 @@ VALUES
 (11, 'Сметана', 1, 1, 'шт', 2);
 
 --
--- Table structure for table `m_supplier`
+-- Table structure for table `supplier`
 --
 
-CREATE TABLE IF NOT EXISTS `m_supplier` (
+CREATE TABLE IF NOT EXISTS `supplier` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(30) NOT NULL,
   `phone` varchar(20) NOT NULL,
@@ -139,10 +139,10 @@ CREATE TABLE IF NOT EXISTS `m_supplier` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `m_supplier`
+-- Dumping data for table `supplier`
 --
 
-INSERT INTO `m_supplier` (`id`, `title`, `phone`, `address`) 
+INSERT INTO `supplier` (`id`, `title`, `phone`, `address`) 
 VALUES
 (1, 'ЗАО Комбинат "Огого"', '', ''),
 (2, 'ООО "Сладкое"', '', ''),
